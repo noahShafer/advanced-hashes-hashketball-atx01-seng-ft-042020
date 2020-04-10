@@ -187,6 +187,8 @@ def player_stats(player_name)
       blocks: player[:blocks],
       slam_dunks: player[:slam_dunks]
     }
+  else
+    return {}
   end
 end
 
