@@ -127,3 +127,46 @@ def game_hash
 end
 
 # Write code here
+def find_val_for(player_name, key) 
+  res = nil
+  game_hash.each {|k,value| 
+    value[:players].each {|v|
+      res = v[key] if v[:player_name] == player_name
+      break if res != nil 
+    }
+  } 
+  return res
+end
+
+def num_points_scored(player_name)
+  return find_val_for(player_name, :points)
+end
+
+def shoe_size(player_name)
+  return find_val_for(player_name, :shoe)
+end
+
+def team_colors(team_name) 
+  res = nil
+  game_hash.each {|k, v|
+    res = v[:colors] if v[:team_name] == team_name
+    break if res != nil
+  }
+  return res
+end
+
+def team_names 
+  return  [game_hash[:home][:team_name], game_hash[:away][:team_name]]
+end
+
+def player_numbers(team_name)
+  nums = []
+  team = game_hash.select {|k,v| v[:team_name] == team_name}
+  team
+  
+end
+
+
+#p num_points_scored("Jeff Adrien")
+# p shoe_size("Jeff Adrien")
+p player_numbers("Brooklyn Nets")
