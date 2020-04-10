@@ -182,7 +182,9 @@ def player_stats(player_name)
 end
 
 def big_shoe_rebounds {
-  
+  players = game_hash[:home][:players]
+  game_hash[:away][:players].each {|p| players.append(p)}
+  players.sort_by {|k, v| v}
 }
 
 
