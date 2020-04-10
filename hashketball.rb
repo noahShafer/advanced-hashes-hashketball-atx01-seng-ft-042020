@@ -180,7 +180,7 @@ def player_stats(player_name)
   
   if player != nil
     return {
-      :pointd => player[:points],
+      :points => player[:points],
     }
   end
 end
