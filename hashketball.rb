@@ -173,8 +173,8 @@ def player_stats(player_name)
   player = nil
   game_hash.each {|k,value| 
     value[:players].each {|v|
-      res = v[key] if v[:player_name] == player_name
-      break if res != nil 
+      player = v if v[:player_name] == player_name
+      break if player != nil 
     }
   } 
   
