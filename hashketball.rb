@@ -169,6 +169,22 @@ def player_numbers(team_name)
   return nums.sort
 end
 
+def player_stats(player_name)
+  player = nil
+  game_hash.each {|k,value| 
+    value[:players].each {|v|
+      res = v[key] if v[:player_name] == player_name
+      break if res != nil 
+    }
+  } 
+  
+  if player != nil
+    return {
+      :pointd => player[:points],
+    }
+  end
+end
+
 
 #p num_points_scored("Jeff Adrien")
 # p shoe_size("Jeff Adrien")
