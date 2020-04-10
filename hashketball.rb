@@ -184,8 +184,8 @@ end
 def big_shoe_rebounds 
   players = game_hash[:home][:players]
   game_hash[:away][:players].each {|p| players.append(p)}
-  
-  return players.sort { |a,b| a[:shoe] <=> b[:shoe] }[players.count - 1]
+  sorted_players = players.sort { |a,b| a[:shoe] <=> b[:shoe] }
+  return big_shoe_rebounds[players.count - 1][:rebounds]
 end
 
 
