@@ -162,7 +162,7 @@ end
 def player_numbers(team_name)
   nums = []
   team = game_hash.select {|k,v| v[:team_name] == team_name}
-  team
+  team[:away]
   
 end
 
