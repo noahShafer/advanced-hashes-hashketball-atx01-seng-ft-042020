@@ -166,7 +166,7 @@ def player_numbers(team_name)
   team[:players].each {|v|
     nums.append(v[:number])
   }
-  return nums
+  return nums.sort
 end
 
 
