@@ -179,14 +179,7 @@ def player_stats(player_name)
   } 
   
   if player != nil
-    return {
-      points: player[:points],
-      rebounds: player[:rebounds],
-      assists: player[:assists],
-      steals: player[:steals],
-      blocks: player[:blocks],
-      slam_dunks: player[:slam_dunks]
-    }
+    return player
   else
     return {}
   end
