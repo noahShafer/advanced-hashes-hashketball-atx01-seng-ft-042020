@@ -181,11 +181,11 @@ def player_stats(player_name)
   return player
 end
 
-def big_shoe_rebounds {
+def big_shoe_rebounds 
   players = game_hash[:home][:players]
   game_hash[:away][:players].each {|p| players.append(p)}
   players.sort_by {|k, v| v}
-}
+end
 
 
 #p num_points_scored("Jeff Adrien")
