@@ -178,11 +178,7 @@ def player_stats(player_name)
     }
   } 
   
-  if player != nil
-    return player
-  else
-    return {}
-  end
+  return player
 end
 
 
